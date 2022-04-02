@@ -3,7 +3,6 @@ const sequelize = require('../../config/connection');
 const { Post, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-
 // get all posts
 router.get('/', (req, res) => {
     console.log('======================');
@@ -22,7 +21,7 @@ router.get('/', (req, res) => {
             {
                 model: User,
                 attributes: ['username']
-            }
+                        }
         ]
     })
         .then(dbPostData => res.json(dbPostData))
@@ -83,7 +82,6 @@ router.post('/', withAuth, (req, res) => {
 });
 
 router.put('/:id', withAuth, (req, res) => {
-
     Post.update({
         title: req.body.title,
         post_comment: req.body.post_comment
