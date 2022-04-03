@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
     // res.render('homepage');
     console.log('===========');
     Post.findAll({
-        attributes: ['id', 'title', 'post_commment', 'created_at'],
+        attributes: ['id', 'title', 'post_content', 'created_at'],
         include: [
             {
                 model: Comment,
@@ -47,7 +47,7 @@ router.get('/post/:id', (req, res) => {
       where: {
         id: req.params.id
       },
-      attributes: ['id', 'title', 'post_commment', 'created_at'],
+      attributes: ['id', 'title', 'post_content', 'created_at'],
       include: [
         {
             model: Comment,

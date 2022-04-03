@@ -15,7 +15,7 @@ Post.init(
         type: DataTypes.STRING,
         allowNull: false
       },
-      post_commment: {
+      post_content: {
         type: DataTypes.TEXT,
         allowNull: true,
       },

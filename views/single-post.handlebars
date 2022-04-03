@@ -1,7 +1,5 @@
 {{> post-info post}}
 
-<!-- displaying form and comments-->
-<!-- only display if logged in -->
 {{#if loggedIn}}
 <form class="comment-form">
   <div>
@@ -9,7 +7,7 @@
   </div>
 
   <div>
-    <button class="button is-warning ml-5 mb-5" type="submit">add comment</button>
+    <button class="button is-danger ml-5 mb-5" type="submit">add comment</button>
   </div>
   
 </form>
@@ -18,5 +16,5 @@
 {{> comments post.comments}}
 
 {{#if loggedIn}}
-<script src="/public/javascript/comment.js"></script>
+<script src="/javascript/comment.js"></script>
 {{/if}}

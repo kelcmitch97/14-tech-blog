@@ -14,11 +14,11 @@
 
     <div class="card-content">
         <div class="content has-text-justified">
-            {{post_commentt}}
+            {{post_content}}
         </div>
             <div class="is-pulled-right">
                 <b>{{user.username}}</b> | 
-                 | {{format_date created_at}} | <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+                 {{format_date created_at}} | <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
             </div>
         
     </div>
